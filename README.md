@@ -55,12 +55,11 @@ MEDIUM - Severity 2 - Suspicious activity, monitor closely
 LOW    - Severity 3 - Informational, low priority
 
 ## AI Layer Explanation
-The Python script acts as the AI triage layer. Rather than a human
-manually reading thousands of raw JSON log lines, the script
-automatically extracts the key fields, applies a risk scoring
-algorithm based on Suricata severity levels, and presents alerts
-in a clean readable format. This is how real Security Operations
-Centers (SOC) work - automated triage before human review.
+The triage layer uses rule-based severity classification as a 
+baseline. The system is designed to be extended with real ML
+models or LLM APIs (such as Claude) for natural language alert
+summarisation. The current version demonstrates the data pipeline
+that an AI model would sit on top of.
 
 ## Real World Detections
 During testing this IDS detected live Spotify P2P broadcast traffic
